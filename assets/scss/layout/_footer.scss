@@ -1,0 +1,78 @@
+footer{
+    position: sticky;
+    top: 100vh;
+    bottom: 0;
+    overflow: hidden;
+    background: rgb(24, 24, 24);
+    .footer-inner{
+        width: 97%;
+        margin: 0 auto;
+        padding-top: 50px;
+        will-change: transform;
+        transform: translateY(20%);
+        opacity: 0;
+        .footer-cont{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            .f-flex{
+                display: flex;
+                justify-content: space-between;
+                font-weight: 600;
+                &:nth-child(1){
+                    @include mobile{
+                        flex-direction: column;
+                        gap: 16px;
+                    }
+                }
+                > a{
+                    img{
+                        width: 30px;
+                        background: #fff;
+                        border-radius: 5px;
+                    }
+                }
+                .f-info{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 40%;
+                    @include mobile{
+                        width: 100%;
+                    }
+                    &-title{
+                        color: rgb(105, 105, 105);
+                    }
+                    &-link{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        text-align: right;
+                        a{
+                            color: #fff;
+                        }
+                        p{
+                            color: #fff;
+                        }
+                    }
+                }
+                .left-title{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    @include mobile{
+                        display: none;
+                    }
+                    p{
+                        color: #fff;
+                    }
+                    a{
+                        color: #fff;
+                    }
+                    button{
+                        color: #fff;
+                    }
+                }
+            }
+        }   
+    }
+}
