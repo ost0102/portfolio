@@ -187,9 +187,9 @@ let brandTl03 = gsap.timeline({
 .to(charsorange03,{color:'#A1D6E2',stagger:.1},0)
 .to(charsorange03,{color:'#000',stagger:.1},2)
 
-// gsap.to('.work-footer .slide .txt',{
-//     xPercent: -100,       
-//     duration: 20,          
-//     ease: "none",          
-//     repeat: -1,   
-// })
+gsap.to('.work-footer .slide .txt',{
+    xPercent: -100,       
+    duration: 20,          
+    ease: "none",          
+    repeat: -1,   
+})
