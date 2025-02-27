@@ -11,6 +11,7 @@
   font: inherit;
   color: inherit;
   line-height: 1.2em;
+  font-family: 'NotoSans';
 }
 
 *, :after, :before {
@@ -62,10 +63,6 @@ ul, ol, nav {
   list-style: none;
 }
 
-@font-face {
-  font-family: "NotoSans";
-  src: url("/assets/fonts/NotoSansKR-VariableFont_wght.ttf") format("truetype");
-}
 .blind {
   position: absolute;
   width: 1px;
