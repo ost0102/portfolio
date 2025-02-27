@@ -1,8 +1,8 @@
-// window.onload = function() {
-//   setTimeout(function() {
-//       window.scrollTo(0, 0); 
-//   }, 100);  
-// };
+window.onload = function() {
+  setTimeout(function() {
+      window.scrollTo(0, 0); 
+  }, 100);  
+};
 
 const lenis = new Lenis();
 
