@@ -1,7 +1,10 @@
 :root {
   --bg:rgb(235, 235, 235);
 }
-
+@font-face {
+  font-family: 'NotoSans';
+  src: url('../fonts/NotoSansKR-VariableFont_wght.ttf') format('truetype');
+}
 * {
   margin: 0;
   padding: 0;
@@ -31,6 +34,7 @@
 
 html, body {
   height: 100%;
+  font-family: 'NotoSans';
 }
 
 img, picture, video, canvas, svg {

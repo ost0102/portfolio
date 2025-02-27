@@ -10,7 +10,6 @@ const navTl = gsap.timeline({
         scrub:1,
         toggleActions: "play reverse play reverse",
         onUpdate:function(self){
-            console.log(self.progress)
             if(self.progress >= 0.13){
                 $('.nav-title p').hide();
             } else{
