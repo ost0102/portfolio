@@ -1,17 +1,13 @@
 :root {
   --bg:rgb(235, 235, 235);
 }
-@font-face {
-  font-family: 'NotoSans';
-  src: url('../fonts/NotoSansKR-VariableFont_wght.ttf') format('truetype');
-}
+
 * {
   margin: 0;
   padding: 0;
   font: inherit;
   color: inherit;
   line-height: 1.2em;
-  font-family: 'NotoSans';
 }
 
 *, :after, :before {
@@ -35,7 +31,6 @@
 
 html, body {
   height: 100%;
-  font-family: 'NotoSans';
 }
 
 img, picture, video, canvas, svg {
@@ -63,6 +58,10 @@ ul, ol, nav {
   list-style: none;
 }
 
+@font-face {
+  font-family: "NotoSans";
+  src: url("/assets/fonts/NotoSansKR-VariableFont_wght.ttf") format("truetype");
+}
 .blind {
   position: absolute;
   width: 1px;
@@ -462,7 +461,7 @@ footer .footer-inner .footer-cont .f-flex .left-title button {
   font-size: 5vw;
   font-weight: 900;
   white-space: nowrap;
-  gap: 30px;
+  gap: 50px;
 }
 #wrap section.s3 .intro-txt .line {
   height: 1px;
@@ -691,10 +690,14 @@ footer .footer-inner .footer-cont .f-flex .left-title button {
   position: relative;
   max-width: 40%;
   width: 100%;
+  -webkit-animation: upDown 1.5s infinite ease-in-out;
+          animation: upDown 1.5s infinite ease-in-out;
 }
 @media (max-width: 768px) {
   #wrap section.s5 .work-cont .work-list > div .work-item {
     max-width: 100%;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 #wrap section.s5 .work-cont .work-list > div .work-item a {
@@ -811,7 +814,7 @@ footer .footer-inner .footer-cont .f-flex .left-title button {
 #wrap section.s5 .work-cont .work-list > div .work-item.on .item-bg {
   position: absolute;
   top: 0;
-  background-image: url("/assets/images/item-bg.gif");
+  background-image: url("../images/item-bg.gif");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100%;
@@ -844,4 +847,26 @@ footer .footer-inner .footer-cont .f-flex .left-title button {
 }
 #wrap section.s5 .work-footer .slide svg {
   width: 30px;
+}
+
+@-webkit-keyframes upDown {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+@keyframes upDown {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
 }/*# sourceMappingURL=style.css.map */

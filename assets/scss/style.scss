@@ -101,7 +101,7 @@
                 font-size: 5vw;
                 font-weight: 900;
                 white-space: nowrap;
-                gap: 30px;
+                gap: 50px;
                 .line{
                     height: 1px;
                     background: #000;
@@ -282,9 +282,11 @@
                     .work-item{
                         position: relative;
                         max-width: 40%;
-                        width: 100%;             
+                        width: 100%; 
+                        animation: upDown 1.5s infinite ease-in-out;           
                         @include mobile{
                             max-width: 100%;
+                            animation: none;
                         }           
                         a{
                             overflow: hidden;
@@ -404,5 +406,14 @@
                 }
             }
         }
+    }
+}
+
+@keyframes upDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
     }
 }
