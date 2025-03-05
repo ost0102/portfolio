@@ -1,3 +1,34 @@
+const progressTl = gsap.timeline({
+    paused: false, 
+});
+let odometer = new Odometer({
+	el: document.querySelector('.loading-num'),
+});
+progressTl
+    .to({}, {
+        duration: 3, 
+        onUpdate: function() {
+            let progress = this.progress(); 
+            let value = Math.round(progress * 100);  
+            odometer.update(value);  
+        }
+    },'0')
+    .to(".progress-ing", {
+        duration: 3, 
+        width: "100%", 
+        ease: "power1.out",
+    },'0')
+    .to(".loading-wrap", {
+        duration: 1,  
+        height: 0,
+        background: 'linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 1) 50%)'
+    }, "+=1") 
+    .to(".loading-cont", {
+        opacity: 0,
+    }, "-=1")
+    .to('body',{
+        overflow:'unset'
+    })
 $(document).on('mouseenter mouseleave', '.work-item', function(event) {
     $(this).toggleClass('on', event.type === 'mouseenter');
 });
@@ -27,6 +58,7 @@ gsap.fromTo('.top-title .frame .char',
         opacity: 1,
         y: 0,
         duration: 1,
+        delay: 4,
         ease: "power2.out",
         onComplete: () => {
             gsap.fromTo('section.s2 .nav-title, section.s2 .nav-list', 
@@ -192,3 +224,4 @@ gsap.to('.work-footer .slide .txt',{
     ease: "none",          
     repeat: -1,   
 })
+
