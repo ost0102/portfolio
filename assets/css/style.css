@@ -58,10 +58,6 @@ ul, ol, nav {
   list-style: none;
 }
 
-@font-face {
-  font-family: "NotoSans";
-  src: url("/assets/fonts/NotoSansKR-VariableFont_wght.ttf") format("truetype");
-}
 .blind {
   position: absolute;
   width: 1px;
@@ -230,6 +226,10 @@ body {
   border-radius: 1.6rem;
 }
 
+@font-face {
+  font-family: "NotoSans";
+  src: url("/assets/fonts/NotoSansKR-VariableFont_wght.ttf") format("truetype");
+}
 footer {
   position: sticky;
   top: 100vh;
